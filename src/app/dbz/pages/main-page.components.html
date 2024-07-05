@@ -1,0 +1,14 @@
+<h1>DBZ main Page</h1>
+<hr>
+<div class="row">
+  <div class="col">
+    <!-- escuchar atributos -->
+
+    <dbz-list [characterList]="characters"
+     (onDelete)="onDeletecharacter($event)"></dbz-list>
+  </div>
+  <div class="col">
+    <!-- escuchar eventos lo recibo en $event  el mismo nobre del que emite (onNewCharacter)-->
+     <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+</div>

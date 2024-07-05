@@ -1,0 +1,17 @@
+<p>add-character works!</p>
+<h4>Agregar Personaje</h4>
+<!-- [] ==> Utilizado para asociar un atributo () ==> activar un evento
+llamado to way data binding
+* importar el formmoudlo en modulo
+propagacioon el formulario
+-->
+<form class="row" (ngSubmit)="emitCharacter()">
+  <input class="form-control mb-2" type="text" name="name" [(ngModel)]="character.name" placeholder="Nombre">
+  <input class="form-control mb-2" type="number" name="power" [(ngModel)]="character.power" placeholder="Poder">
+  <button type="submit" class="btn btn-primary">
+    Agregar
+  </button>
+  <pre>
+    {{ character | json }}
+  </pre>
+</form>
